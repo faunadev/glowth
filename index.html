@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLOWTH | Makeup &amp; Skincare</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,900&family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/store.css">
+</head>
+<body>
+<div class="topbar">
+    <span id="topNote">Free shipping on orders over ₱1,500 · Cash on delivery available</span>
+    <div><button data-open="help">Help</button><button data-open="track">Track Order</button></div>
+</div>
+<header id="nav">
+    <div class="nav-main">
+        <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Menu">
+            <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <span class="logo">GLOWTH</span>
+        <form class="hsearch" id="headSearch" role="search">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <input type="search" id="searchInput" placeholder="Search makeup, skincare…" aria-label="Search products" autocomplete="off">
+        </form>
+        <div class="nav-actions">
+            <button class="icon-btn" id="openAccount" aria-label="Account">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.400 3.600-7 8-7s8 2.600 8 7"/></svg>
+            </button>
+            <button class="icon-btn" id="openFav" aria-label="Favorites">
+                <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.5-9.2C1.2 8.6 3 5 6.5 5c2 0 3.7 1.1 5.5 3 1.8-1.9 3.5-3 5.500-3C21 5 22.8 8.6 21.500 11.800 19.500 16.400 12 21 12 21z"/></svg>
+                <span class="badge zero" id="favCount">0</span>
+            </button>
+            <button class="icon-btn" id="openCart" aria-label="Shopping bag">
+                <svg viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg>
+                <span class="badge zero" id="cartCount">0</span>
+            </button>
+        </div>
+    </div>
+    <nav class="nav-sub" id="navSub">
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" data-nav="home" data-key="home">Home</a></li>
+            <li class="has-mega">
+                <a href="#shop" data-nav="shop" data-key="shop">Shop All</a>
+                <div class="mega">
+                    <div>
+                        <h4>Makeup</h4>
+                        <a href="#shop/makeup/face" data-nav="shop" data-cat="Makeup" data-sub="Face">Face</a>
+                        <a href="#shop/makeup/lips" data-nav="shop" data-cat="Makeup" data-sub="Lips">Lips</a>
+                        <a href="#shop/makeup/eyes" data-nav="shop" data-cat="Makeup" data-sub="Eyes">Eyes</a>
+                        <a class="all" href="#shop/makeup" data-nav="shop" data-cat="Makeup">Shop all makeup</a>
+                    </div>
+                    <div>
+                        <h4>Skincare</h4>
+                        <a href="#shop/skincare/cleanse" data-nav="shop" data-cat="Skincare" data-sub="Cleanse">Cleanse &amp; Tone</a>
+                        <a href="#shop/skincare/treat" data-nav="shop" data-cat="Skincare" data-sub="Treat">Treat &amp; Repair</a>
+                        <a href="#shop/skincare/protect" data-nav="shop" data-cat="Skincare" data-sub="Protect">Hydrate &amp; Protect</a>
+                        <a class="all" href="#shop/skincare" data-nav="shop" data-cat="Skincare">Shop all skincare</a>
+                    </div>
+                    <div class="promo">
+                        <span class="card-cat">Limited time</span>
+                        <strong>Up to 40% off</strong>
+                        <span style="font-size:.85rem;color:#444">Selected makeup and skincare favorites.</span>
+                        <a class="btn" href="#sale" data-nav="shop" data-col="sale">Shop Sale</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#new" data-nav="shop" data-col="new" data-key="new">New Arrivals</a></li>
+            <li><a href="#best" data-nav="shop" data-col="best" data-key="best">Best Sellers</a></li>
+            <li><a href="#sale" data-nav="shop" data-col="sale" data-key="sale">Sale</a></li>
+            <li><a href="#about" data-nav="about" data-key="about">About</a></li>
+            <li class="m-only"><a href="#" data-open="track">Track Order</a></li>
+            <li class="m-only"><a href="#" data-open="help">Help</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- hero -->
+<section class="hero" data-views="home">
+    <div class="hero-text">
+        <h1>Glow like<br><em>never before.</em></h1>
+        <p style="font-weight: 900; margin-bottom: 30px; letter-spacing: 2px;">ELITE SKINCARE. RADIANCY DEFINED.</p>
+        <a href="#shop" class="btn" data-nav="shop" data-cat="All">Explore Now</a>
+    </div>
+    <div class="hero-image"></div>
+</section>
+
+<!-- showcase -->
+<section class="image-showcase" data-views="home">
+    <div class="showcase-item">
+        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=1000" alt="Makeup Art" onerror="this.style.display='none'">
+        <div class="overlay-text"><h2 style="font-size: 2.8rem;">Spring Radiance</h2></div>
+    </div>
+    <div class="showcase-item">
+        <img src="https://images.unsplash.com/photo-1599733594230-6b823276abcc?auto=format&fit=crop&q=80&w=1200" alt="Pure Pink Texture" onerror="this.style.display='none'">
+        <div class="overlay-text"><h2 style="font-size: 2.2rem;">Pure Texture</h2></div>
+    </div>
+</section>
+
+<!-- categories -->
+<section class="grid-container" data-views="home">
+    <div class="grid-box">
+        <img src="https://images.unsplash.com/photo-1571646034647-52e6ea84b28c?auto=format&fit=crop&q=80&w=800" alt="Lipsticks" onerror="this.style.display='none'">
+        <h3>LIPSTICKS</h3>
+        <p>High-pigment, velvet finish.</p>
+        <a href="#shop/makeup/lips" class="btn" data-nav="shop" data-cat="Makeup" data-sub="Lips">Shop Lip</a>
+    </div>
+    <div class="grid-box">
+        <img src="https://images.unsplash.com/photo-1557205465-f3762edea6d3?auto=format&fit=crop&q=80&w=800" alt="Foundation" onerror="this.style.display='none'">
+        <h3>FOUNDATION</h3>
+        <p>Seamless 24-hour coverage.</p>
+        <a href="#shop/makeup/face" class="btn" data-nav="shop" data-cat="Makeup" data-sub="Face">Shop Face</a>
+    </div>
+    <div class="grid-box">
+        <img src="https://images.unsplash.com/photo-1767256046031-743d33937c4e?auto=format&fit=crop&q=80&w=800" alt="Serums" onerror="this.style.display='none'">
+        <h3>SKINCARE</h3>
+        <p>Dermatologist approved glow.</p>
+        <a href="#shop/skincare" class="btn" data-nav="shop" data-cat="Skincare">Shop Skin</a>
+    </div>
+</section>
+
+<!-- about -->
+<section class="about" data-views="about" hidden>
+    <h2>About <em>GLOWTH</em></h2>
+    <p>GLOWTH is a makeup and skincare brand built around one idea: skin that looks and feels its best, every day.</p>
+    <p>Our collection pairs gentle, effective skincare with easy-to-wear makeup in soft, flattering shades, so a simple routine can do a lot.</p>
+    <a href="#shop" class="btn" data-nav="shop" data-cat="All">Shop the Collection</a>
+</section>
+
+<!-- shop -->
+<section class="shop page-top" id="shop" data-views="shop" hidden>
+    <div class="section-head">
+        <h2 id="shopTitle">The Collection</h2>
+        <p id="shopSub">Makeup and skincare, made for everyday radiance.</p>
+    </div>
+    <div class="toolbar">
+        <div class="filters" id="filters">
+            <button class="chip active" data-cat="All">All</button>
+            <button class="chip" data-cat="Makeup">Makeup</button>
+            <button class="chip" data-cat="Skincare">Skincare</button>
+        </div>
+        <label class="sort">Sort by
+            <select id="sortSelect">
+                <option value="featured">Featured</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+                <option value="rating">Top Rated</option>
+            </select>
+        </label>
+    </div>
+    <div class="subfilters" id="subFilters"></div>
+    <div class="count" id="resultCount"></div>
+    <div class="products" id="products"></div>
+</section>
+
+
+<!-- welcome offer -->
+<section class="welcome" data-views="home" id="welcomeBanner">
+    <div>
+        <h3>New here? Get <em id="welcomePct">15%</em> off your first order.</h3>
+        <p>Create a free account and your welcome coupon is waiting in your account.</p>
+    </div>
+    <button class="btn" data-open="account">Claim my coupon</button>
+</section>
+
+<!-- sale -->
+<section class="sale-section" data-views="home">
+    <p class="eyebrow">LIMITED TIME OFFER</p>
+    <h2>UP TO 40% OFF</h2>
+    <a href="#sale" class="btn btn-light" data-nav="shop" data-col="sale">Get The Glow</a>
+</section>
+
+<footer>
+    <div class="foot-grid">
+        <div>
+            <span class="logo">GLOWTH</span>
+            <p>Makeup and skincare for everyday radiance.</p>
+            <span class="foot-promo">NEW HERE? JOIN FOR A WELCOME COUPON</span>
+        </div>
+        <div>
+            <h5>Shop</h5>
+            <a href="#shop" data-nav="shop">Shop All</a>
+            <a href="#new" data-nav="shop" data-col="new">New Arrivals</a>
+            <a href="#best" data-nav="shop" data-col="best">Best Sellers</a>
+            <a href="#sale" data-nav="shop" data-col="sale">Sale</a>
+        </div>
+        <div>
+            <h5>Customer Care</h5>
+            <button class="flink" data-open="help">Help &amp; FAQ</button>
+            <button class="flink" data-open="track">Track Your Order</button>
+            <button class="flink" data-open="account">My Account</button>
+        </div>
+        <div>
+            <h5>GLOWTH</h5>
+            <a href="#about" data-nav="about">About Us</a>
+        </div>
+    </div>
+    <div class="foot-bottom">
+        <span>&copy; 2026 GLOWTH. All rights reserved.</span>
+        <span>Cash on Delivery · GCash · Credit/Debit Card</span>
+    </div>
+</footer>
+
+<!-- overlay -->
+<div class="overlay" id="overlay"></div>
+
+<!-- cart drawer -->
+<aside class="drawer" id="cartDrawer" aria-label="Shopping bag">
+    <div class="drawer-head"><h3>Your Bag</h3><button class="close-btn" data-close aria-label="Close">&times;</button></div>
+    <div class="drawer-body" id="cartBody"></div>
+    <div class="drawer-foot" id="cartFoot"></div>
+</aside>
+
+<!-- favorites drawer -->
+<aside class="drawer" id="favDrawer" aria-label="Favorites">
+    <div class="drawer-head"><h3>Favorites</h3><button class="close-btn" data-close aria-label="Close">&times;</button></div>
+    <div class="drawer-body" id="favBody"></div>
+</aside>
+
+<!-- product modal -->
+<div class="modal" id="productModal">
+    <div class="modal-box"><button class="close-btn" data-close aria-label="Close">&times;</button><div id="productModalBody"></div></div>
+</div>
+
+<!-- checkout modal -->
+<div class="modal" id="checkoutModal">
+    <div class="modal-box co-box"><button class="close-btn" data-close aria-label="Close">&times;</button><div id="checkoutBody"></div></div>
+</div>
+
+<!-- orders modal -->
+<div class="modal" id="ordersModal">
+    <div class="modal-box co-box"><button class="close-btn" data-close aria-label="Close">&times;</button><h2>Track Your Order</h2>
+        <form class="track" id="trackForm" style="flex-wrap:wrap"><input id="trackInput" placeholder="Order number (GLW-261003-0001)" aria-label="Order number"><input id="trackEmail" type="email" placeholder="Email used for the order" aria-label="Email"><button class="btn btn-sm" type="submit">Track</button></form>
+        <div id="ordersBody"></div></div>
+</div>
+
+<!-- help modal -->
+<div class="modal" id="helpModal">
+    <div class="modal-box co-box"><button class="close-btn" data-close aria-label="Close">&times;</button>
+        <h2>Help &amp; FAQ</h2>
+        <div class="faq">
+            <details open><summary>How much is shipping?</summary><p id="faqShip">Shipping is a flat fee, and free on larger orders.</p></details>
+            <details><summary>Which payment methods can I use?</summary><p>Cash on Delivery, GCash and Credit/Debit Card are available at checkout.</p></details>
+            <details><summary>How do I track my order?</summary><p>Choose Track Order at the top of the page and enter your order number and email. Signed-in customers can also see all their orders in My Account.</p></details>
+            <details><summary>How do coupons work?</summary><p>New accounts get a welcome coupon automatically. Enter any coupon code in your bag or at checkout while signed in. One coupon can be used per order.</p></details>
+            <details><summary>Can I return a product?</summary><p>Unopened items can be returned within 7 days of delivery. Please keep your order number handy.</p></details>
+        </div>
+    </div>
+</div>
+
+<!-- account -->
+<div class="modal" id="accountModal">
+    <div class="modal-box co-box"><button class="close-btn" data-close aria-label="Close">&times;</button><div id="accountBody"></div></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets/store.js"></script>
+</body>
+</html>
